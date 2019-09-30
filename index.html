@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.css" integrity="sha256-4zmTXfA1u+L/3UWfbkPTMAsb5pNv45V8/b1uwJEdiAs=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css" integrity="sha256-Sv44mRstp+agwCWaPO4R+KKV+Az9Cu+qS5/hNRQlHT0=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.js" integrity="sha256-nTk/a8Kql0uKPMcUKZ7luVTLQzohljLoRxiP5U1oT7Q=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js" integrity="sha256-bmXHkMKAxMZgr2EehOetiN/paT9LXp0KKAKnLpYlHwE=" crossorigin="anonymous"></script>
+    <title>My Task Board Project</title>
+</head>
+<body onload="drawAllNotes()">
+    <h1 class="taskBoardHeader">My Task Board</h1>
+    <div class="container submitContainer" id="submitFormDiv">
+     <div class="row">
+      <div class="col-sm-4 col-xs-2"></div>
+      <div class="col-sm-4 col-xs-8">
+       <form name="taskBoardFiller" id="taskBoardForm" onsubmit="return false;">
+        <label>Time of completion</label>
+        <input alt="Time Target" title="Time Target" id="timepicker1" type="text" name="timeTarget" placeholder="" />  </br>    
+        <label>Date to Complete</label>
+        <input alt="Date Target" title="Date Target" id="dateTargetInput" type="date" name="dateTarget" placeholder="" required/> </br>
+        <label>Task Content</label> 
+        <textarea alt="Task Content" title="Task Content" id="taskContentTargetInput" class="md-textarea" type="text" name="taskContent" placeholder="" reuired></textarea> 
+        <br/>
+        <input id="saveNote" type="button" value="Save Note" class="btn btn-success"/>
+        <input id="clearNote" type="button" value="Clear Note" class="btn btn-info"/>
+       </form>
+      </div>
+      <div class="col-sm-4 col-xs-2"></div>
+     </div>
+    </div>
+    <div>
+      <h2 class="tasksThatAreOpen">Open Tasks:</h2>
+      <div class="container" id="taskFullDisplay">
+        <div class="row" id="taskToDisplay">
+        </div>
+      </div>
+    </div>
+<script src="./js/main.js"></script>
+</body>
+</html>

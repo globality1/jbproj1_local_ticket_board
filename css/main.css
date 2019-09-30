@@ -1,0 +1,86 @@
+body {
+ background-image: url("../img/tile.jpg");
+}
+
+.taskBoardHeader {
+    font-family: 'Mansalva', cursive!important;
+    text-align: center;
+    font-size: 70px;
+}
+
+.tasksThatAreOpen {
+    font-family: 'Mansalva', cursive!important;
+    font-size: 35px;
+    text-align: center;
+}
+
+#taskBoardForm {
+ background-image: url("../img/formbg.jpg");
+ position: relative;
+ top: 20px;
+ padding: 22px;
+ background-position: -55px;
+}
+
+[class~="submitContainer"] {
+    height: 250px;
+}
+
+/** correction per my design*/
+label {
+    margin-bottom: 9px!important;
+}
+
+[class~="noteDisplay"] {
+    background-image: url("../img/notebg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 270px;
+    padding: 27px;
+    font-size: 12px;
+    float: left;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 5s;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 5s;
+    opacity: 1;
+}
+
+
+#noteContent {
+    height: 124px;
+    width: 160px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+textarea {
+    white-space: pre-line!important;
+}
+
+[id*="close"]  {
+    float: right;
+    padding:2px 5px;
+    background: transparent;
+    border: transparent;
+    color: transparent;
+}
+
+[class*="noteDisplay"]:hover > [id*="close"]:hover  {
+    float: right;
+    padding:2px 5px;
+    background:#ccc;
+    color:red;
+}
+
+[class*="noteDisplay"]:hover > [id*="close"]  {
+    float: right;
+    padding:2px 5px;
+    background: transparent;
+    border: transparent;
+    color: red;
+}
+
+[class*="new"] {
+    opacity: 0;
+}
